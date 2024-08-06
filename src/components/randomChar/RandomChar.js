@@ -19,7 +19,21 @@ class RandomChar extends Component {
     marvelService = new MarvelService();
 
     onCharLoaded = (char) => {
-        this.setState({char});
+        const maxDescriptionLength = 200;
+        let description = char.description;
+
+        if (!description) {
+            description = "There is no description available for this character.";
+        } else if (description.length > maxDescriptionLength) {
+            description = description.substring(0, maxDescriptionLength) + '...';
+        }
+
+        this.setState({
+            char: {
+                ...char,
+                description
+            }
+        });
     }
 
     updateChar = () => {
