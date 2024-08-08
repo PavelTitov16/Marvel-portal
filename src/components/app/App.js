@@ -1,23 +1,18 @@
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { MainPage, ComicsPage } from "../../pages";
 import AppHeader from "../appHeader/AppHeader";
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/Marvel-portal">
             <div className="app">
                 <AppHeader/>
                 <main>
-                    <Switch>
-                        <Route exact path="/">
-                            <MainPage />
-                        </Route>
-                        <Route exact path="/comics">
-                            <ComicsPage />
-                        </Route>
-                        <Redirect to="/" />
-                    </Switch>
+                    <Routes>
+                        <Route path="/" element={<MainPage />} />
+                        <Route path="/comics" element={<ComicsPage />} />
+                    </Routes>
                 </main>
             </div>
         </Router>
