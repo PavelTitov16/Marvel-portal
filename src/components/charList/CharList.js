@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect, useRef, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
@@ -9,13 +9,28 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './charList.scss';
 
+const setContent = (process, Component, newItemLoading) => {
+    switch (process) {
+        case 'waiting':
+            return <Spinner/>;
+        case 'loading':
+            return newItemLoading ? <Component/> : <Spinner/>;
+        case 'confirmed':
+            return <Component/>;
+        case 'error':
+            return <ErrorMessage/>;
+        default:
+            throw new Error('Unexpected process state');
+    }
+}
+
 const CharList = (props) => {
     const [charList, setCharList] = useState([]);
     const [newItemsLoading, setNewItemsLoading] = useState(false);
     const [offset, setOffset] = useState(1240);
     const [charsEnded, setCharsEnded] = useState(false);
     
-    const {loading, error, getAllCharacters} = useMarvelService();
+    const {getAllCharacters, process, setProcess} = useMarvelService();
 
     useEffect(() => {
         onRequest(offset, true);
@@ -24,7 +39,8 @@ const CharList = (props) => {
     const onRequest = (offset, initial) => {
         initial ? setNewItemsLoading(false) : setNewItemsLoading(true)
         getAllCharacters(offset)
-            .then(onCharListLoaded);
+            .then(onCharListLoaded)
+            .then(() => setProcess('confirmed'))
     };
 
     const onCharListLoaded = (newCharList) => {
@@ -62,7 +78,6 @@ const CharList = (props) => {
                         className='char__item'
                         tabIndex={0}
                         ref={el => itemRefs.current[i] = el}
-                        key={char.id}
                         onClick={() => {
                             props.onCharSelected(char.id);
                             focusOnItem(i);
@@ -83,22 +98,20 @@ const CharList = (props) => {
 
         return (
             <ul className="char__grid">
-                <TransitionGroup Group component={null}>
+                <TransitionGroup component={null}>
                     {chars}
                 </TransitionGroup>
             </ul>
         )
     };
 
-    const items = renderCharacters(charList);
-    const errorMessage = error ? <ErrorMessage/> : null;
-    const spinner = loading && !newItemsLoading ? <Spinner/> : null;
+    const elements = useMemo(() => {
+        return setContent(process, () => renderCharacters(charList), newItemsLoading);
+    }, [process])
 
     return (
         <div className="char__list">
-            {errorMessage}
-            {spinner}
-            {items}
+            {elements}
             <button 
                 onClick={() => onRequest(offset)}
                 disabled={newItemsLoading}
