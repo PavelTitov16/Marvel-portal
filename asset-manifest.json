@@ -1,16 +1,44 @@
 {
   "files": {
-    "main.css": "/Marvel-portal/static/css/main.5949eff8.css",
-    "main.js": "/Marvel-portal/static/js/main.6940368f.js",
+    "main.css": "/Marvel-portal/static/css/main.d405f783.css",
+    "main.js": "/Marvel-portal/static/js/main.83c326fe.js",
+    "static/js/880.e38a42e1.chunk.js": "/Marvel-portal/static/js/880.e38a42e1.chunk.js",
+    "static/css/125.dda96954.chunk.css": "/Marvel-portal/static/css/125.dda96954.chunk.css",
+    "static/js/125.1d17cf32.chunk.js": "/Marvel-portal/static/js/125.1d17cf32.chunk.js",
+    "static/css/489.9a85f8e1.chunk.css": "/Marvel-portal/static/css/489.9a85f8e1.chunk.css",
+    "static/js/489.431f6efb.chunk.js": "/Marvel-portal/static/js/489.431f6efb.chunk.js",
+    "static/css/770.5c17a4e1.chunk.css": "/Marvel-portal/static/css/770.5c17a4e1.chunk.css",
+    "static/js/770.f3955956.chunk.js": "/Marvel-portal/static/js/770.f3955956.chunk.js",
+    "static/css/565.81a0aff0.chunk.css": "/Marvel-portal/static/css/565.81a0aff0.chunk.css",
+    "static/js/565.3edd30f3.chunk.js": "/Marvel-portal/static/js/565.3edd30f3.chunk.js",
+    "static/css/297.15931ab4.chunk.css": "/Marvel-portal/static/css/297.15931ab4.chunk.css",
+    "static/js/297.1b61170f.chunk.js": "/Marvel-portal/static/js/297.1b61170f.chunk.js",
+    "static/js/591.454177fb.chunk.js": "/Marvel-portal/static/js/591.454177fb.chunk.js",
+    "static/js/592.7fac6581.chunk.js": "/Marvel-portal/static/js/592.7fac6581.chunk.js",
     "static/media/vision.png": "/Marvel-portal/static/media/vision.067d4ae1936d64a577ce.png",
     "static/media/mjolnir.png": "/Marvel-portal/static/media/mjolnir.61f31e1809f12183a524.png",
+    "static/media/Avengers.png": "/Marvel-portal/static/media/Avengers.4065c8f9c94e3d8b039a.png",
     "static/media/error.gif": "/Marvel-portal/static/media/error.42292aa12b6bc303ce99.gif",
+    "static/media/Avengers_logo.png": "/Marvel-portal/static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "/Marvel-portal/index.html",
-    "main.5949eff8.css.map": "/Marvel-portal/static/css/main.5949eff8.css.map",
-    "main.6940368f.js.map": "/Marvel-portal/static/js/main.6940368f.js.map"
+    "main.d405f783.css.map": "/Marvel-portal/static/css/main.d405f783.css.map",
+    "main.83c326fe.js.map": "/Marvel-portal/static/js/main.83c326fe.js.map",
+    "880.e38a42e1.chunk.js.map": "/Marvel-portal/static/js/880.e38a42e1.chunk.js.map",
+    "125.dda96954.chunk.css.map": "/Marvel-portal/static/css/125.dda96954.chunk.css.map",
+    "125.1d17cf32.chunk.js.map": "/Marvel-portal/static/js/125.1d17cf32.chunk.js.map",
+    "489.9a85f8e1.chunk.css.map": "/Marvel-portal/static/css/489.9a85f8e1.chunk.css.map",
+    "489.431f6efb.chunk.js.map": "/Marvel-portal/static/js/489.431f6efb.chunk.js.map",
+    "770.5c17a4e1.chunk.css.map": "/Marvel-portal/static/css/770.5c17a4e1.chunk.css.map",
+    "770.f3955956.chunk.js.map": "/Marvel-portal/static/js/770.f3955956.chunk.js.map",
+    "565.81a0aff0.chunk.css.map": "/Marvel-portal/static/css/565.81a0aff0.chunk.css.map",
+    "565.3edd30f3.chunk.js.map": "/Marvel-portal/static/js/565.3edd30f3.chunk.js.map",
+    "297.15931ab4.chunk.css.map": "/Marvel-portal/static/css/297.15931ab4.chunk.css.map",
+    "297.1b61170f.chunk.js.map": "/Marvel-portal/static/js/297.1b61170f.chunk.js.map",
+    "591.454177fb.chunk.js.map": "/Marvel-portal/static/js/591.454177fb.chunk.js.map",
+    "592.7fac6581.chunk.js.map": "/Marvel-portal/static/js/592.7fac6581.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5949eff8.css",
-    "static/js/main.6940368f.js"
+    "static/css/main.d405f783.css",
+    "static/js/main.83c326fe.js"
   ]
 }
